@@ -28,6 +28,11 @@ export default {
 }
 </script>
 <style scoped>
+#footer {
+	background-color: #0C2340;
+    padding: 3rem 0;
+}
+
 .footer small {
 	font-size: 12px;
 }

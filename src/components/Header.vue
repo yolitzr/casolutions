@@ -19,26 +19,6 @@ export default {
             subTitle: 'Welcome to',
             btnName: 'Contact'
         }
-    },
-    props: {
-        msg: String,
-        bgColor: {
-            type: String,
-            default: "#0099CC"
-        },
-        textShadow: {
-            type: String,
-            default: '#0076CE',
-        }
-    },
-
-    computed: {
-        cssVars() {
-            return {
-                '--bg-color': this.bgColor,
-                '--dell-blue': this.textShadow,
-            }
-        }
     }
 }
 </script>
@@ -52,6 +32,10 @@ header {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+}
+
+#home {
+    height: 100vh;
 }
 
 .home-main {
@@ -96,8 +80,4 @@ header {
     background-image: linear-gradient(to right, #0e549f, #d740e4, #3033dd, #a418b7);
     box-shadow: 0 0 15px 0 rgba(210, 210, 210, 0.75);
 } */
-
-.full-height {
-    height: 100vh;
-}
 </style>

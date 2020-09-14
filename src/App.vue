@@ -30,7 +30,6 @@ import Header from './components/Header.vue'
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
-// import fontawesome from "./plugins/fontawesome.js"
 
 export default {
 	name: 'App',
@@ -43,6 +42,7 @@ export default {
     },
 
 	methods: {
+        /* Shrink Navigation */
         scrollFunction() {
             window.onscroll = () => {
                 if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -57,6 +57,7 @@ export default {
     },
 
     mounted () {
+        /* Shrink Navigation */
         this.scrollFunction();
     }
 }
@@ -89,10 +90,5 @@ export default {
 .navbar-toggler {
     background-color: black;
     margin-right: 15px;
-}
-
-#footer {
-	background-color: #0C2340;
-    padding: 3rem 0;
 }
 </style>
