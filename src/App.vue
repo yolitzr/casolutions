@@ -91,4 +91,11 @@ export default {
     background-color: black;
     margin-right: 15px;
 }
+
+.line {
+    background: linear-gradient(135deg, #800080 0%, #1d1160 100%);
+    width: 100px;
+    height: 2px;
+    margin: 0 auto 15px;
+}
 </style>

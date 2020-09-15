@@ -4,7 +4,7 @@
             <b-row>
                 <b-col class="text-center">
                     <h1 class="font-weight-bold">{{title}}</h1>
-                    <div class="block"></div>
+                    <div class="line"></div>
                     <p class="mt-3">
                         {{subTitle}}
                     </p>
@@ -14,9 +14,9 @@
                 <b-col col lg="4" cols="12" class="about-us mt-4"  align="center">
                     <h3 class="d-inline-block">
                         <span>
-                            <font-awesome-icon :icon="['fas', 'desktop']" size="2x" class="about-icon mr-2" />
+                            <font-awesome-icon :icon="['fas', 'desktop']" class="about-icon mr-2" />
                         </span>
-                        Our Process
+                        {{process}}
                     </h3>
                     <p class="mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -28,9 +28,9 @@
                 <b-col col lg="4" cols="12" class="about-us mt-4" align="center">
                     <h3 class="d-inline-block">
                         <span>
-                            <font-awesome-icon :icon="['fas', 'tasks']" size="2x" class="about-icon mr-2" />
+                            <font-awesome-icon :icon="['fas', 'tasks']" class="about-icon mr-2" />
                         </span>
-                        Our Goal
+                        {{goals}}
                     </h3>
                     <p class="mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -42,9 +42,9 @@
                 <b-col col lg="4" cols="12" class="about-us mt-4" align="center">
                     <h3 class="d-inline-block">
                         <span>
-                            <font-awesome-icon :icon="['fas', 'hands-helping']" size="2x" class="about-icon mr-2" />
+                            <font-awesome-icon :icon="['fas', 'hands-helping']" class="about-icon mr-2" />
                         </span>
-                        Our Mission
+                        {{mission}}
                     </h3>
                     <p class="mt-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -126,7 +126,10 @@ export default {
     data () {
         return {
             title: 'About Us and Our Services',
-            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+            subTitle: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+            goals: 'Our Goals',
+            process: 'Our Process',
+            mission: 'Our Mission'
         }
     }
 }

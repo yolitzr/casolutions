@@ -5,11 +5,11 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faHome, faDesktop, faHandsHelping, faTasks, faCode, faPaintBrush, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faDesktop, faHandsHelping, faTasks, faCode, faPaintBrush, faShoppingCart, faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faGithub, faLinkedin, faHtml5, faCss3Alt, faJs} from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faHome, faDesktop, faTasks, faHandsHelping, faTwitter, faGithub, faLinkedin, faCode, faPaintBrush, faShoppingCart, faHtml5, faCss3Alt, faJs),
+library.add(faHome, faDesktop, faTasks, faHandsHelping, faTwitter, faGithub, faLinkedin, faCode, faPaintBrush, faShoppingCart, faHtml5, faCss3Alt, faJs, faMapMarkerAlt, faEnvelope),
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
