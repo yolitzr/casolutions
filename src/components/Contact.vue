@@ -76,7 +76,7 @@
 		name: 'Contact',
 		data (){
 			return {
-				title: 'Contact Us',
+				title: `Let's Work Together`,
 				subTitle: 'Please, use the form below or send an email.',
 				show: true,
 				text: '',
@@ -116,7 +116,7 @@ textarea.form-control {
 
 .contact-form input {
 	padding: 20px;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 
 .contact-form button {

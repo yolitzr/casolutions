@@ -1,5 +1,5 @@
 <template>
-    <header id="home" class="full-height">
+    <header id="home" class="full-height hero-img">
         <b-container>
             <div class="home-main text-center mb-3 d-lg-block  mx-auto">
                 <h3 class="d-block font-italic text-white position-relative">{{subTitle}}</h3>
@@ -24,14 +24,26 @@ export default {
 </script>
 
 <style scoped>
-header {
-    background-image: linear-gradient(rgba(82, 82, 82, 0.6), rgba(82, 82, 82, 0.6)), url(../assets/bg.png);
-    background-repeat: no-repeat;
+.hero-img {
+    background-image: url(../assets/bg.png);
+    /* background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover;
+    -o-background-size: cover; */
+    position: relative;
+    background-size: cover;
+}
+
+.hero-img:before {
+   content: "";
+   background: #4c4c4c80; 
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   opacity: 0.9; 
 }
 
 #home {

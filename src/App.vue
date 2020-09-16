@@ -20,6 +20,7 @@
         </b-navbar>
 		<Header></Header>
 		<About></About>
+        <Services></Services>
         <Contact></Contact>
         <Footer></Footer>
 	</div>
@@ -28,6 +29,7 @@
 <script>
 import Header from './components/Header.vue'
 import About from './components/About.vue'
+import Services from './components/Services.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
@@ -36,6 +38,7 @@ export default {
 	components: {
 		Header,
         About,
+        Services,
         Contact,
         Footer,
        
@@ -45,9 +48,10 @@ export default {
         /* Shrink Navigation */
         scrollFunction() {
             window.onscroll = () => {
-                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 200) {
                 document.getElementById("navbar").style.background = "#0C2340";
                 document.getElementById("navbar").style.color = "#ffffff";
+                document.getElementById("navbar").style.transition = "all 0.5s";
                 
                 } else {
                     document.getElementById("navbar").style.background = "none";
@@ -84,7 +88,7 @@ export default {
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
-    border-bottom: 3px solid #dce3ea;
+    border-bottom: 3px solid rgba(195, 0, 255, 0.80);
 }
 
 .navbar-toggler {
