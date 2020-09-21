@@ -3,13 +3,14 @@
 		<b-navbar id="navbar" toggleable="md" type="dark" class="brand fixed-top">
             <b-container>
                 <b-navbar-brand href="#" id="logo">
-                    <img src="./assets/ca.png" alt="CA Designers" />
+                    <img src="./assets/ca.png" alt="CA Designers" id="logo-c"/>
+                    <img src="./assets/ca-1.png" alt="CA Designers" id="logo-w" class="logo-w"/>
                 </b-navbar-brand>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav v-b-scrollspy="{offset:100, method:'auto'}" class="ml-auto">
                         <b-nav-item href="#home" class="active">Home</b-nav-item>
-                        <b-nav-item href="#about">About Us</b-nav-item>
+                        <b-nav-item href="#about">About</b-nav-item>
                         <!-- <b-nav-item href="#services">Services</b-nav-item>
                         <b-nav-item href="#technologies">Technologies</b-nav-item>
                         <b-nav-item href="#portfolio">Portfolio</b-nav-item> -->
@@ -44,16 +45,33 @@ export default {
        
     },
 
+     metaInfo: {
+      // if no subcomponents specify a metaInfo.title, this title will be used
+      title: 'Developer FullStack',
+      // all titles will be injected into this template
+      titleTemplate: '%s | Ing. Albrto Urbaez',
+      meta: [
+      { name: 'description', content: 'Profesional en sistemas, mención analista, con experiencia en desarrollo de diversos proyectos tecnológicos creados con diferentes plataformas de programación.' },
+      { name: 'author', content: 'CA Solutions' },
+      { name: 'keywords', content: 'developer, back-end, javascript, symfony, sass, front-end, fullstack, nodejs, yarn, css, html5, betox, beto, laravel, angular, wordpress, webpack, grunt, github, bitbucket, docker, sql, php'}
+    ]
+    },
+
 	methods: {
         /* Shrink Navigation */
         scrollFunction() {
             window.onscroll = () => {
                 if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 200) {
-                document.getElementById("navbar").style.background = "#0C2340";
-                document.getElementById("navbar").style.color = "#ffffff";
-                document.getElementById("navbar").style.transition = "all 0.5s";
-                
+                    document.getElementById("navbar").style.background = "#0C2340";
+                    document.getElementById("navbar").style.color = "#ffffff";
+                    document.getElementById("navbar").style.transition = "all 0.5s";
+                    document.getElementById('logo-w').classList.remove("logo-w");
+                    document.getElementById('logo-c').classList.add("logo-c");
+                    console.log('no header');
                 } else {
+                    console.log('header');
+                    document.getElementById('logo-c').classList.remove("logo-c");
+                    document.getElementById('logo-w').classList.add("logo-w");
                     document.getElementById("navbar").style.background = "none";
                 }
             }
@@ -79,7 +97,7 @@ export default {
 }
 
 .brand img {
-    width: 35%;
+    width: 8%;
     padding: 10px;
 }
 
@@ -102,4 +120,19 @@ export default {
     height: 2px;
     margin: 0 auto 15px;
 }
+
+.brand-navbar {
+    background: #0C2340;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+.logo-c {
+    display: none;
+}
+
+.logo-w {
+    visibility: hidden;
+}
+
 </style>

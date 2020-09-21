@@ -16,6 +16,10 @@ import { faTwitter, faGithub, faLinkedin, faHtml5, faCss3Alt, faJs} from '@forta
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+//Vue Meta
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
+
 //Particles
 // import VueParticles from 'vue-particles'
 // Vue.use(VueParticles)
