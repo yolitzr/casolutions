@@ -2,7 +2,7 @@
     <div id="services">
         <b-container fluid="xl">
             <b-row>
-                <b-col class="text-center">
+                <b-col class="text-center" data-aos="flip-down">
                     <h1 class="font-weight-bold">{{title}}</h1>
                     <div class="line"></div>
                 </b-col>
@@ -11,7 +11,7 @@
 
         <b-container fluid>
             <b-row class="d-flex justify-content-center mt-4">
-				<b-col lg="3" md="3"  align="center" class="box-services my-1 mx-3">
+				<b-col lg="3" md="6" xl="4"  align="center" class="box-services" data-aos="flip-up" data-aos-delay="200">
 					<div class="services-img p-4" align="center">
 						<font-awesome-icon :icon="['fas', 'code']" size="3x" class="services-icon"/>
 					</div>
@@ -25,7 +25,7 @@
 					<div class="line-top-left"></div>
 					<div class="line-bottom-right"></div>
 				</b-col>
-				<b-col lg="3" md="3" align="center" class="box-services my-1 mx-3">
+				<b-col lg="3" md="6" xl="4" align="center" class="box-services" data-aos="flip-up" data-aos-delay="400">
 					<div class="services-img p-4" align="center">
 						<font-awesome-icon :icon="['fas', 'paint-brush']" size="3x" class="services-icon"/>
 					</div>
@@ -39,7 +39,7 @@
 					<div class="line-top-left"></div>
 					<div class="line-bottom-right"></div>
 				</b-col>
-                <b-col lg="3" md="3"  align="center" class="box-services my-1 mx-3">
+                <b-col lg="3" md="6" xl="4" align="center" class="box-services" data-aos="flip-up" data-aos-delay="600">
 					<div class="services-img p-4" align="center">
 						<font-awesome-icon :icon="['fas', 'code']" size="3x" class="services-icon"/>
 					</div>
@@ -53,7 +53,7 @@
 					<div class="line-top-left"></div>
 					<div class="line-bottom-right"></div>
 				</b-col>
-				<b-col lg="3" md="3" align="center" class="box-services my-1 mx-3">
+				<b-col lg="3" md="6" xl="4" align="center" class="box-services" data-aos="flip-up" data-aos-delay="800">
 					<div class="services-img p-4" align="center">
 						<font-awesome-icon :icon="['fas', 'shopping-cart']" size="3x" class="services-icon"/>
 					</div>
@@ -86,15 +86,17 @@
 
 <style scoped>
     #services {
-        padding: 0 0 4rem;
+        padding: 4rem 0;
     }
     
     .box-services {
         padding: 20px 20px;
         background-color: #fff;
         vertical-align: middle;
-        max-width: 300px;
+        max-width: 280px;
         box-shadow: 0 0 5px #004792;
+        margin-left: 7px;
+        margin-right: 7px;
     }
 
     .line-top-left, .line-bottom-right {
@@ -139,4 +141,16 @@
         height: 80px;
         width: 80px;
     }
+
+@media (min-width: 375px) and (max-width: 600px) {
+    .box-services {
+        margin-bottom: 25px;
+    }
+}
+
+@media (min-width: 767px) {
+    .box-services {
+        margin: 15px;
+    }
+}
 </style>

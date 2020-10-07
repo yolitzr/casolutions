@@ -2,7 +2,7 @@
     <div id="about" class="bg-about">
         <b-container fluid="xl">
             <b-row>
-                <b-col class="text-center">
+                <b-col class="text-center" data-aos="fade-up">
                     <h1 class="font-weight-bold">{{title}}</h1>
                     <div class="line"></div>
                     <p class="mt-3">
@@ -12,7 +12,7 @@
             </b-row>
 
             <b-row class="mt-4">
-                <b-col lg="7">
+                <b-col lg="7" data-aos="fade-left">
                     <div class="box-about" align="center">
                         <h3 class="d-inline-block mt-2">
                             <span>
@@ -25,34 +25,16 @@
                         </p>
                         <h5 class="mt-5">Utilizamos los siguientes lenguajes, CMS, Frameworks, Librerias y herramientas:</h5>  
                         <div class="skills">
-                            <ul class="d-flex justify-content-between mt-4">
-                                <li><img src="https://img.shields.io/badge/-HTML-E34F26?style=flat&logo=HTML5&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-CSS-1572B6?style=flat&logo=css3&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Vue%20JS-4FC08D?style=flat&logo=vue.js&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Wordpress-21759B?style=flat&logo=wordpress&logoColor=white"></li>
+                            <ul class="d-flex justify-content-center mt-4">
+                                <li><img v-for="(groupOne, item) in gruopImgOne" :src="groupOne.url" :alt="groupOne.alt" :key="item"></li>
                             </ul>
 
-                            <ul class="d-flex justify-content-between">
-                                <li><img src="https://img.shields.io/badge/-Php-777BB4?style=flat&logo=php&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Laravel-FF2D20?style=flat&logo=laravel&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Symfony-000000?style=flat&logo=symfony&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-docker-2496ED?style=flat&logo=docker&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-MySql-4479A1?style=flat&logo=mysql&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-npm-CB3837?style=flat&logo=npm&logoColor=white"></li>
+                            <ul class="d-flex justify-content-center">
+                                <li><img v-for="(groupTwo, item) in gruopImgTwo" :src="groupTwo.url" :alt="groupTwo.alt" :key="item"></li>
                             </ul>
 
-                            <ul class="d-flex justify-content-between">
-                                <li><img src="https://img.shields.io/badge/-Webpack-8DD6F9?style=flat&logo=webpack&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Github-181717?style=flat&logo=github&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-GitKraken-179287?style=flat&logo=gitkraken&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white"></li>
-                                <li><img src="https://img.shields.io/badge/-Sublime%20Text-FF9800?style=flat&logo=sublime-text&logoColor=white"></li>
+                            <ul class="d-flex justify-content-center">
+                                <li><img v-for="(groupThree, item) in gruopImgThree" :src="groupThree.url" :alt="groupThree.alt" :key="item"></li>
                             </ul>
                         </div>                          
                     </div>
@@ -70,7 +52,7 @@
                     </div> -->
                 </b-col>
 
-                <b-col lg="5">
+                <b-col lg="5" data-aos="fade-right">
                     <div class="experence">
                         <h3 class="mt-2">Experences</h3>
                         <ul class="mt-4">
@@ -99,6 +81,7 @@ export default {
             goalsText: 'Build fast and efficient websites with the best optimization to get an SEO that helps with web positioning.',
             process: 'Our Process',
             processText: 'Write a clean code semantic, organized and valid that eliminates excess code and allows others to easily understand and therefore update content in the future.',
+            // Progress Bar
             intervalID: '',
             increment: 1,
             skillSet: [
@@ -109,7 +92,38 @@ export default {
 				{ area: 'Project Owner', initLevel: 0, level: 90 },
                 { area: 'SEO', initLevel: 0, level: 60 },
                 { area: 'Consulting', initLevel: 0, level: 85 }
-			]
+            ],
+            
+            // Grupo de Img
+            gruopImgOne: [
+                { url: require('../assets/logos/html.svg'), alt: 'HTML5'},
+                { url: require('../assets/logos/css.svg'), alt: 'CSS3'},
+                { url: require('../assets/logos/js.svg'), alt: 'JavaScript'},
+                { url: require('../assets/logos/bootstrap.svg'), alt: 'Bootstrap'},
+                { url: require('../assets/logos/tailwind.svg'), alt: 'Tailwind CSS'},
+                { url: require('../assets/logos/vuejs.svg'), alt: 'VueJS'},
+                { url: require('../assets/logos/wordpress.svg'), alt: 'Wordpress'}
+            ],
+
+            gruopImgTwo: [
+                { url: require('../assets/logos/php.svg'), alt: 'PHP'},
+                { url: require('../assets/logos/laravel.svg'), alt: 'Laravel'},
+                { url: require('../assets/logos/nodejs.svg'), alt: 'NodeJS'},
+                { url: require('../assets/logos/symfony.svg'), alt: 'Symfony'},
+                { url: require('../assets/logos/java.svg'), alt: 'JAVA'},
+                { url: require('../assets/logos/docker.svg'), alt: 'Docker'},
+                { url: require('../assets/logos/mysql.svg'), alt: 'MySQL'},
+                { url: require('../assets/logos/npm.svg'), alt: 'npm'}
+            ],
+
+            gruopImgThree: [
+                { url: require('../assets/logos/webpack.svg'), alt: 'Webpack'},
+                { url: require('../assets/logos/git.svg'), alt: 'Git'},
+                { url: require('../assets/logos/gitkraken.svg'), alt: 'GitKraken'},
+                { url: require('../assets/logos/github.svg'), alt: 'Github'},
+                { url: require('../assets/logos/vsc.svg'), alt: 'Visual Studio Code'},
+                { url: require('../assets/logos/sublimetext.svg'), alt: 'Sublime Text'}
+            ],
         }
     },
 
@@ -144,6 +158,9 @@ export default {
     -moz-background-size: cover;
     -o-background-size: cover; 
 } */
+.box-about {
+    width: 95%;
+}
 
 #about {
     padding: 4rem 0;
@@ -189,5 +206,20 @@ export default {
     list-style: none;
 }
 
+.skills li img {
+    padding: 5px;
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+    #about {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .experence {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 
 </style>

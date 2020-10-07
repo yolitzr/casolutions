@@ -2,7 +2,7 @@
 	<div id="contact" class="contact">
 		<b-container fluid="lg">
 			<b-row>
-				<b-col class="mb-1 text-center">
+				<b-col class="mb-1 text-center" data-aos="slide-up">
 					<h1 class="font-weight-bold">{{title}}</h1>
 					<div class="line"></div>
 					<p class="mt-3">{{subTitle}}</p>
@@ -11,7 +11,7 @@
 				<b-col>
 					<b-form @submit="onSubmit" @reset="onReset" v-if="show">
 						<b-row class="mt-5 contact-form" align-v="start">
-							<b-col lg="5" cols="12">
+							<b-col lg="5" cols="12" class="contact-info" data-aos="fade-up-left">
 								<div class="icon-address">
 									<font-awesome-icon :icon="['fas', 'map-marker-alt']" size="1x"/> 
 									<span>Córdoba, Argentina</span>
@@ -20,7 +20,7 @@
 									<font-awesome-icon :icon="['fas', 'envelope']" size="1x"/> 
 									<span>info@casolutions.tech</span>
 								</div>
-								<div class="d-flex justify-content-start mt-4">
+								<div class="d-flex justify-content-start mt-1 social-icon">
 									<a href="#" title="Twitter">
 										<font-awesome-icon :icon="['fab', 'twitter']" size="2x" class="social-address" />
 									</a>
@@ -33,7 +33,7 @@
 								</div>
 							</b-col>
 							
-							<b-col lg="7" cols="12">
+							<b-col lg="7" cols="12" data-aos="fade-up-right">
 								<b-form-input
 									id="name"
 									v-model="form.name"
@@ -100,8 +100,8 @@
 				this.$nextTick(() => {
 				this.show = true
 				})
-			}
-		},
+			},
+		}
 	}
 </script>
 
@@ -150,5 +150,51 @@ textarea.form-control {
 
 .social-address:hover {
 	opacity: .8;
+}
+@media (min-width: 375px) and (max-width: 767px) {
+	
+	#contact {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	
+	.contact-info {
+		display: grid;
+		justify-items: center;
+		margin-bottom: 25px;
+	}
+	
+	.social-icon {
+		display: grid;
+		justify-items: center;
+	}
+
+	.social-address {
+		margin: 5px;
+		background: #808080;
+		width: 38px;
+		height: 38px;
+		padding: 12px;
+		border-radius: 50%;
+		color: #ffffff;
+}
+}
+
+@media (min-width: 768px)  and (max-width: 920px) {
+	#contact {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+
+	.contact-info {
+		display: grid;
+		justify-items: center;
+		margin-bottom: 25px;
+	}
+	
+	.social-icon {
+		display: grid;
+		justify-items: center;
+	}
 }
 </style>

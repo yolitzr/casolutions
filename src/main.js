@@ -20,6 +20,15 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
 
+//AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+    offset: 50,
+    delay: 0,
+    duration: 1000,
+});
+
 //Particles
 // import VueParticles from 'vue-particles'
 // Vue.use(VueParticles)
@@ -47,5 +56,3 @@ Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
 }).$mount('#app')
-
-require('./plugins/jquery');

@@ -8,7 +8,7 @@
                 </b-navbar-brand>
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                 <b-collapse id="nav-collapse" is-nav>
-                    <b-navbar-nav v-b-scrollspy="{offset:100, method:'auto'}" class="ml-auto">
+                    <b-navbar-nav  class="ml-auto">
                         <b-nav-item href="#home" class="active">Home</b-nav-item>
                         <b-nav-item href="#about">About</b-nav-item>
                         <!-- <b-nav-item href="#services">Services</b-nav-item>
@@ -67,9 +67,7 @@ export default {
                     document.getElementById("navbar").style.transition = "all 0.5s";
                     document.getElementById('logo-w').classList.remove("logo-w");
                     document.getElementById('logo-c').classList.add("logo-c");
-                    console.log('no header');
                 } else {
-                    console.log('header');
                     document.getElementById('logo-c').classList.remove("logo-c");
                     document.getElementById('logo-w').classList.add("logo-w");
                     document.getElementById("navbar").style.background = "none";
@@ -135,4 +133,15 @@ export default {
     visibility: hidden;
 }
 
+@media (min-width: 375px) and (max-width: 620px) {
+    .brand img {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 920px) {
+    .brand img {
+        width: 12%;
+    }
+}
 </style>
