@@ -4,7 +4,9 @@
             <div class="home-main mb-3 mx-auto">
                 <h3 class="font-italic text-white position-relativ">{{subTitle}}</h3>
                 <h1 class="position-relative text-uppercase font-weight-bold text-white">{{title}}</h1>
-                <b-button class="btn-home position-relative mt-4 p-3 rounded-pill text-uppercase">{{btnName}}</b-button>
+                <h3 class="font-italic text-white position-relativ">Desarrolladores web</h3>
+                <h4 class="font-italic text-white position-relative">Freelance</h4>
+                <b-button class="btn-home position-relative mt-5 px-2 py-3 rounded-pill text-uppercase">{{btnName}}</b-button>
             </div>
         </b-container>
     </header>
@@ -71,7 +73,7 @@ button {
 
 .hero-img:before {
    content: "";
-   background: #4c4c4c80; 
+   background-color: rgba(0,0,0,0.55); 
    display: block;
    position: absolute;
    width: 100%;
@@ -80,7 +82,7 @@ button {
 }
 
 #home {
-    height: 100vh;
+    height:100vh;
 }
 
 .home-main {
@@ -114,6 +116,7 @@ button {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+    outline: none;
 }
 
 @media (min-width: 375px) and (max-width: 767px) {

@@ -11,8 +11,8 @@
                     <b-navbar-nav  class="ml-auto">
                         <b-nav-item href="#home" class="active">Home</b-nav-item>
                         <b-nav-item href="#about">About</b-nav-item>
-                        <!-- <b-nav-item href="#services">Services</b-nav-item>
-                        <b-nav-item href="#technologies">Technologies</b-nav-item>
+                        <b-nav-item href="#services">Services</b-nav-item>
+                        <!-- <b-nav-item href="#technologies">Technologies</b-nav-item>
                         <b-nav-item href="#portfolio">Portfolio</b-nav-item> -->
                         <b-nav-item href="#contact">Contact</b-nav-item>
                     </b-navbar-nav>
@@ -22,6 +22,7 @@
 		<Header></Header>
 		<About></About>
         <Services></Services>
+        <Portfolio></Portfolio>
         <Contact></Contact>
         <Footer></Footer>
 	</div>
@@ -29,8 +30,9 @@
 
 <script>
 import Header from './components/Header.vue'
-import About from './components/About.vue'
+// import About from './components/About.vue'
 import Services from './components/Services.vue'
+import Portfolio from './components/Portfolio.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
 
@@ -38,8 +40,9 @@ export default {
 	name: 'App',
 	components: {
 		Header,
-        About,
+        // About,
         Services,
+        Portfolio,
         Contact,
         Footer,
        
@@ -47,9 +50,9 @@ export default {
 
      metaInfo: {
       // if no subcomponents specify a metaInfo.title, this title will be used
-      title: 'Developer FullStack',
+      title: 'CA Solutions',
       // all titles will be injected into this template
-      titleTemplate: '%s | Ing. Albrto Urbaez',
+      titleTemplate: '%s',
       meta: [
       { name: 'description', content: 'Profesional en sistemas, mención analista, con experiencia en desarrollo de diversos proyectos tecnológicos creados con diferentes plataformas de programación.' },
       { name: 'author', content: 'CA Solutions' },

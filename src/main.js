@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueRouter from 'vue-router'
 import './registerServiceWorker'
 
+Vue.use(VueRouter)
 //BoostrapVue
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
